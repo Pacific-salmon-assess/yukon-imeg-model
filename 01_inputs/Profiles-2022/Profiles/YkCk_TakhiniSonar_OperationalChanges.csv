@@ -1,0 +1,7 @@
+Years,Component,Change_Event
+2017,Sonar,"ARIS 1800 (x2). Two short-range sonars (ARIS 1800) were installed upstream of the deflection weirs in 2017, each ensonifying an Inshore range (at 30 minute intervals)."
+2018,Sonar,"ARIS 1200. A s ingle long-range on LB (ARIS 1200) was used to assess the entire river . The ensonified range was divided into an Inshore and Offshore strata, each recorded for only 30 minutes of the hour.  Counts were tallied using Echotastic software."
+2017,Range,Inshore (2 to  35-40m) and Inshore (0 to 29m)
+2018,Range,Offshore (29 to 55-60m)
+2017,Set Net,Depth: 6’ or 10’;Length:  50’ or 100’;  Same mesh sizes and hang ratio in both years.
+2018,Set Net,"Depth: 8’, 10’, or 15’; Length: 50’; Same mesh sizes and hang ratio in both years."

@@ -1,0 +1,18 @@
+# Annual estimates of Nulato River Chinook Escapement,,,,,,,,,
+# Overview of site and current methods at ??ANY??,,,,,,,,,
+# Year = Run year,,,,,,,,,
+# Estimate = run size of XYZ Chinook at in the Nulato  River based on weir counts,,,,,,,,,
+# SE = Standard Error calculated based on INSERT,,,,,,,,,
+# p10 and p90 = 10th abd 90th percentiles of the ?posterior distribution?,,,,,,,,,
+# Variance  = Calculated based on INSERT,,,,,,,,,
+# CV = Coefficient of Variation = SE / Estimate,,,,,,,,,
+Year, Estimate,Type,SE,p10,p90,Variance,CV,Use,UseNotes
+1994,1795,Tower,NA,NA,NA,NA,NA,TRUE,TBI
+1995,1412,Tower,NA,NA,NA,NA,NA,TRUE,TBI
+1996,756,Tower,NA,NA,NA,NA,NA,TRUE,TBI
+1997,4811,Tower,NA,NA,NA,NA,NA,TRUE,TBI
+1998,1556,Tower,NA,NA,NA,NA,NA,TRUE,TBI
+1999,1953,Tower,NA,NA,NA,NA,NA,TRUE,TBI
+2000,916,Tower,NA,NA,NA,NA,NA,TRUE,TBI
+2002,2696,Tower,NA,NA,NA,NA,NA,TRUE,TBI
+2003,1997,Weir,NA,NA,NA,NA,NA,TRUE,TBI

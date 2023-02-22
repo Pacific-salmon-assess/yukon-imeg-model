@@ -1,0 +1,14 @@
+# Annual estimates run size of adult Chinook salmon larger than X at Pelly Sonar,,,,,,
+# Overview of site and methods at https://www.yukonriverpanel.com/re-fund-project/pelly-river-chinook-salmon-sonar-pilot-program/,,,,,,
+# Year = Run year,,,,,,
+# Estimate = run size,,,,,,
+# SE = Standard Error calculated based on INSERT,,,,,,
+# p10 and p90 = 10th and 90th percentiles of the ?posterior distribution?,,,,,,
+Year,Estimate ,SE,p10,p90,Use,UseNotes
+2016,5807,NA,NA,NA,TRUE,TBI
+2017,9081,NA,NA,NA,TRUE,TBI
+2018,9751,NA,NA,NA,TRUE,TBI
+2019,6927,NA,NA,NA,TRUE,TBI
+2020,5678,NA,NA,NA,TRUE,TBI
+2021,4980,NA,NA,NA,TRUE,TBI
+2022,NA,NA,NA,NA,TRUE,TBI

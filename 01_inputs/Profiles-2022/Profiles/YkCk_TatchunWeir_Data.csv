@@ -1,0 +1,13 @@
+# Annual estimates of Tatchun Chinook at WEIR,,,,,,,,,
+# Overview of site and current methods at https://www.yukonriverpanel.com/re-fund-project/tatchun-creek-chinook-enumeration/adfg=sonar.site_info&site=16,,,,,,,,,
+# Year = Run year,,,,,,,,,
+# Estimate = run size of XYZ Chinook at in the ?Tatchun River?,,,,,,,,,
+# SE = Standard Error calculated based on INSERT,,,,,,,,,
+# p10 and p90 = 10th abd 90th percentiles of the ?posterior distribution?,,,,,,,,,
+# Variance  = Calculated based on INSERT,,,,,,,,,
+# CV = Coefficient of Variation = SE / Estimate,,,,,,,,,
+Year, Estimate,Type,SE,p10,p90,Variance,CV,Use,UseNotes
+1997,1198,weir,NA,NA,NA,NA,NA,TRUE,TBI
+1998,405,weir,NA,NA,NA,NA,NA,TRUE,TBI
+1999,252,weir,NA,NA,NA,NA,NA,TRUE,TBI
+2000,276,weir,NA,NA,NA,NA,NA,FALSE,weir was removed early (August 24) due to flooding

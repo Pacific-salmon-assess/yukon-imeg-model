@@ -1,0 +1,14 @@
+Years,Component,Change_Event
+2005,All,"First year of operation, DIDSON-LR, ensonification confirmed with target testing at beginning of season. Traces identified as salmon based behaviour and size (0.55 m general threshold). Review of 20 randomly chosen files by second reviewer post season found 98% concordance in counts. "
+2006,Sonar,"Downstream salmon subtracted from hourly counts beginning this year. After the sonar count was complete, annual upstream carcass pitch conducted. Review of 20 randomly chosen files by second reviewer post season found 99% concordance in counts."
+2007,Sonar,Acquired heavier duty weir tripods. Target sized used to identify salmon decreased to 0.50 based on previous years ASL collection and observation of lengths interpreted to be freshwater fish based on behaviour.  
+2009,Sonar,"Addition of 8 degree concentrator lenses to improve clarity at distance past 20m. More substantial weir tripods in place, resulting in narrower migration corridor in front of sonar, approximately 36 m. "
+2010,Sonar,Position of targets within 5 m sections of river from sonar recorded beginning this year for production of range frequency histograms. 
+2005-2012,Sonar,Passage during missing data gaps was interpolated based on the mean number of fish per hour recorded the previous 24 hours
+2013,Sonar,"From this year on, missing samples estimated by interpolation of the average file count over the 12 hours before and after the missing sample "
+2013,Sonar,Starting this year onwards ~10% of sonar files were recounted each day to measure the precision of counts - repeatability between individuals described using APE as in Enzenhofer et al. 2010. 
+2014,Sonar,"Since this year, sample variance estimator reported based on absolute difference between readers to quantify the person of counts and net variability between readers. "
+2014,Sonar,Three cross sectional profiles taken with a Biosonics DTX splitbeam echo-sounder confirms minimal change to the river profile since project inception. 
+2016,Test Fishery,"Over one week (August 7-14) 46 complete drifts undertaken for a fishing effort of 173 minutes. The net was a 16.25 cm mesh gillnet, 30 m long by 2.0 m deep. See 2016 report for further details and discussion. Total catch was two female Chinook. "
+"2016, 2017",Sonar,"Deployment of ARIS (2016, 69 hours and 2017, 73 hours) to compare counts with DIDSON, and to obtain accurate measurements of fish over 50 cm from a subset of the files. "
+2018,Sonar,"Change to ARIS 1800 for full season to capture higher resolution images and use of ARIS fish software for identification and enumeration of targets. Switch to use of coefficient of variation to quantify repeatability/precision of counts (Enzenhofer et al., 2010)."

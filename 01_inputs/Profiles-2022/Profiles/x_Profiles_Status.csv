@@ -1,0 +1,55 @@
+Country ,Region,Project ,Used in Run Reconstruction,Model Grouping  ,RR Model Usage Info ,SR Model Usage,Status,Comments
+US,Mainstem,Harvest stock ID and age-sex composition,Yes,Stock-specific,Run,Age comp,High priority - in progress,
+US,Mainstem,Lower Yukon Test Fishery,No/Yes,Drainage-wide,Run ,,Low priority - if requested,Harvest included in Y1
+US,Mainstem,Lower Yukon Test Fishery GSI,No/Yes,Stock-specific,Run ,,Low priority - if requested,Used for estimation  of harvest stock proportion 
+US,Mainstem,Commercial harvest,Yes,Drainage-wide,Harvest,,High priority - in progress,
+US,Mainstem,Commercial harvest CPUE,Yes/No,Drainage-wide,Run,,Low priority - if requested,Used in initial modeling. More works are needed
+US,Mainstem,Commercial harvest stock separation,Yes,Stock-specific,Harvest,,High priority - in progress,We cannot recreate sotck separation.  Accept  or reject stock prop.
+US,Mainstem,Subsistence harvest,Yes,Drainage-wide,Harvest,,High priority - in progress,Accuracy of 1981-1988 unknown 
+US,Mainstem,Subsistence harvest stock separation,Yes,Stock-specific,Harvest,,High priority - in progress,
+US,Mainstem,Radio-telemetry mark-recapture,Yes,Drainage-wide,Run,,High priority - in progress,
+US,Mainstem,Pilot Station sonar,Yes,Drainage-wide,Run,Age comp,Completed,
+US,Mainstem,Pilot Station GSI – revised estimates,Yes,Stock-specific,Run,,High priority - in progress,
+US,Mainstem,Eagle sonar,Yes,Canada,Run,Age comp,Completed,
+US,Tributaries - Lower,Andreafsky weir,Yes,Lower,Escapement ,Age comp,Completed,
+US,Tributaries - Lower,E. Andreafsky aerial,Yes,Lower,Escapement ,,High priority - in progress,
+US,Tributaries - Lower,W. Andreafsky aerial,Yes,Lower,Escapement ,,High priority - in progress,
+US,Tributaries - Lower,Anvik aerial,Yes,Lower,Escapement ,,High priority - in progress,Have not decided which to be used 
+US,Tributaries - Lower,Anvik ID aerial,Yes,Lower,Escapement ,,High priority - in progress,Have not decided which to be used 
+US,Tributaries - Lower,Nulato tower,Yes,Lower,Escapement ,Age comp,High priority - in progress,
+US,Tributaries - Lower,N. Nulato aerial,Yes,Lower,Escapement ,,High priority - in progress,
+US,Tributaries - Lower,S. Nulato aerial,Yes,Lower,Escapement ,,High priority - in progress,
+US,Tributaries - Lower,Gisasa tower/weir,Yes,Lower,Escapement ,Age comp,Completed,
+US,Tributaries - Lower,Gisasa aerial,Yes,Middle,Escapement ,,High priority - in progress,
+US,Tributaries - Middle,Henshaw weir,Yes,Middle,Escapement ,Age comp,Completed,
+US,Tributaries - Middle,Chena tower,Yes,Middle,Escapement ,Age comp,High priority - in progress,
+US,Tributaries - Middle,Chena aerial,Yes,Middle,Escapement ,,High priority - in progress,
+US,Tributaries - Middle,Salcha tower,Yes,Middle,Escapement ,Age comp,High priority - in progress,
+US,Tributaries - Middle,Salcha aerial,Yes,Middle,Escapement ,,High priority - in progress,
+US,Tributaries - Middle,Goodpaster tower,No,Middle,Escapement ,Age comp?,High priority - in progress,Possible to include 
+US,Tributaries - Middle,Tanana mark-recapture / Sonar,Yes/No,Middle,Escapement ,,High priority - in progress,Not activated in current model 
+Canada,Headwaters,Teslin sonar,No,Canada,Escapement ,Age comp?,High priority - in progress,"3-4 years in recent years,"
+Canada,Headwaters,Big Salmon aerial,Yes,Canada,Escapement ,,High priority - in progress,
+Canada,Headwaters,Big Salmon sonar,Yes,Canada,Escapement ,Age comp?,High priority - in progress,
+Canada,Headwaters,Whitehorse fishway,Yes,Canada,Escapement ,Age comp?,High priority - in progress,
+Canada,Headwaters,Wolf aerial,Yes,Canada,Escapement ,,High priority - in progress,
+Canada,Headwaters,Nisutlin Aerial,Yes,Canada,Escapement ,,High priority - in progress,
+Canada,Headwaters,Little Salmon Aerial,Yes,Canada,Escapement ,,High priority - in progress,
+Canada,Headwaters,"Tatchun surveys (three years of weirs, foot surveys, and boat surveys)",Yes,Canada,Escapement ,Age comp?,High priority - in progress,
+Canada,Mainstem,Eagle GSI,No,Canada,Run,,Not anticipated,
+Canada,Mainstem,Conners stock-specific run reconstructions,No,Canada,Run,,Not anticipated,
+Canada,Mainstem,DFO border fish wheel mark-recapture,Yes,Canada,Run,Age comp,High priority - in progress,
+Canada,Mainstem,Harvest stock ID and age-sex composition,No,Canada,Harvest,,Low priority - if requested,
+Canada,Mainstem,Commercial harvest CPUE,Yes/No,Canada,Run,,Low priority - if requested,Used in initial modeling. More works are needed
+Canada,Mainstem,Total harvest,Yes,Canada,Harvest,Age comp,High priority - in progress,
+Canada,Porcupine,Total harvest,Yes,Canada,Harvest,,High priority - in progress,"Need to decide how this will be treated.  Include in Canada, include in Y5? "
+Canada,Porcupine,Porcupine sonar,No,Canada,Escapement ,Age comp?,Low priority - if requested,"3-4 years in recent years,"
+Canada,TBD,Chandindu weir,No,Canada,Escapement ,Age comp?,Low priority - if requested,"3-4 years in recent years,"
+Canada,TBD,Klondike sonar,No,Canada,Escapement ,Age comp?,Low priority - if requested,"3-4 years in recent years,"
+Canada,TBD,Ross aerial,Yes,Canada,Escapement ,,High priority - in progress,
+Canada,TBD,Takhini sonar,No,Canada,Escapement ,Age comp?,Low priority - if requested,"3-4 years in recent years,"
+Canada,Tributaries - Central Yukon,None yet,,,,,,
+Canada,Tributaries - Pelly,Pelly sonar,No,Canada,Escapement ,Age comp?,Completed,"3-4 years in recent years,"
+Canada,Tributaries - Pelly,Blind creek weir,Yes,Canada,Escapement ,Age comp?,Completed,
+Canada,Tributaries - Stewart,None yet,,,,,,
+Canada,Tributaries - Upper Yukon,Tincup aerial,Yes,Canada,Escapement ,,High priority - in progress,

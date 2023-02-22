@@ -1,0 +1,171 @@
+# Annual estimates of Total Harvest By Fishery Type,,,,,,,,,,
+# Type = US_Comm; US_Sport; US_Subsistence,,,,,,,,,,
+# US_Comm = Sum of District totals from US Chinook Commercial _ Test fish harvest.csv provided by ADF&G in spring 2021,,,,,,,,,,
+# For US_Comm; the column Other includes the sum of test and illegal catches (which are part of the total in the Estimate column),,,,,,,,,,
+# US_Subsistence = Using data for Alaska Yukon River Total from  Yukon_Subsistence_Chinook_1961_2019.csv provided by ADF&G in spring 2021,,,,,,,,,,
+# NOTE: NEED TO DISCUSS WHETHER TO USE Yukon Area Total (inclusive of Coastal) instead,,,,,,,,,,
+# US_Sport = harvest column from Sportfish Harvest.csv provided by ADF&G in spring 2021,,,,,,,,,,
+# US_Total = ,,,,,,,,,,
+Type,Year,Estimate,SE,p10,p90,Variance,CV,Other,Use,UseNotes
+US_Sport,1977,156,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1978,523,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1979,554,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1980,956,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1981,769,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1982,1006,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1983,1048,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1984,351,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1985,1368,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1986,796,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1987,502,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1988,944,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1989,1063,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1990,544,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1991,773,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1992,431,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1993,1695,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1994,2281,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1995,2525,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1996,3873,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1997,2174,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1998,654,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,1999,1023,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2000,276,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2001,679,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2002,486,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2003,2719,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2004,1513,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2005,483,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2006,739,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2007,960,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2008,409,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2009,863,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2010,474,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2011,474,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2012,345,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2013,166,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2014,0,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2015,13,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2016,20,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2017,18,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2018,200,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2019,38,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2020,49,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2021,0,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Sport,2022,0,NA,NA,NA,NA,NA,NA,TRUE,TBI
+US_Subsistence,1961,21488,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1962,11110,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1963,24852,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1964,16231,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1965,16608,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1966,11507,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1967,16448,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1968,12004,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1969,13972,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1970,13874,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1971,25584,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1972,20258,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1973,24343,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1974,19758,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1975,13121,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1976,18174,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1977,20101,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1978,30785,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1979,31005,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1980,42724,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1981,29690,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1982,28158,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1983,49478,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1984,42428,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1985,39771,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1986,45238,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1987,55039,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1988,45495,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1989,48462,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1990,48587,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,1991,46773,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1992,47077,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1993,63915,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1994,53902,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1995,50620,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1996,45671,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1997,57117,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1998,54124,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,1999,53305,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2000,36404,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2001,55819,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2002,43742,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2003,56959,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2004,55713,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2005,53409,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2006,48593,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2007,55174,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2008,45186,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2009,33805,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2010,44559,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2011,40980,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2012,30415,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2013,12533,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2014,3286,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2015,7577,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2016,21627,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2017,38036,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2018,31812,NA,NA,NA,NA,NA,NA,TRUE,Does not include the Coastal District.
+US_Subsistence,2019,48379,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,2020,22668,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,2021,1945,NA,NA,NA,NA,NA,NA,TRUE,
+US_Subsistence,2022,1827,NA,NA,NA,NA,NA,NA,TRUE,
+US_Comm,1969,91027,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1970,79145,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1971,110507,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1972,92840,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1973,75353,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1974,98089,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1975,63838,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1976,87776,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1977,96757,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1978,99168,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1979,127743,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1980,153985,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1981,158018,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1982,123644,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1983,147910,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1984,119904,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1985,146114,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1986,99268,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1987,134760,NA,NA,NA,NA,NA,2789,TRUE,
+US_Comm,1988,100794,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,1989,105346,NA,NA,NA,NA,NA,3211,TRUE,
+US_Comm,1990,97708,NA,NA,NA,NA,NA,1514,TRUE,
+US_Comm,1991,106473,NA,NA,NA,NA,NA,5222,TRUE,
+US_Comm,1992,122134,NA,NA,NA,NA,NA,3282,TRUE,
+US_Comm,1993,95682,NA,NA,NA,NA,NA,2132,TRUE,
+US_Comm,1994,115471,NA,NA,NA,NA,NA,2334,TRUE,
+US_Comm,1995,126204,NA,NA,NA,NA,NA,3476,TRUE,
+US_Comm,1996,91890,NA,NA,NA,NA,NA,2219,TRUE,
+US_Comm,1997,116471,NA,NA,NA,NA,NA,3580,TRUE,
+US_Comm,1998,44703,NA,NA,NA,NA,NA,1007,TRUE,
+US_Comm,1999,70768,NA,NA,NA,NA,NA,1493,TRUE,
+US_Comm,2000,9112,NA,NA,NA,NA,NA,597,TRUE,
+US_Comm,2001,0,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,2002,24888,NA,NA,NA,NA,NA,758,TRUE,
+US_Comm,2003,41118,NA,NA,NA,NA,NA,680,TRUE,
+US_Comm,2004,56943,NA,NA,NA,NA,NA,792,TRUE,
+US_Comm,2005,32339,NA,NA,NA,NA,NA,310,TRUE,
+US_Comm,2006,46646,NA,NA,NA,NA,NA,817,TRUE,
+US_Comm,2007,34483,NA,NA,NA,NA,NA,849,TRUE,
+US_Comm,2008,4641,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,2009,316,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,2010,9897,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,2011,82,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,2012,0,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,2013,0,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,2014,0,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,2015,0,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,2016,0,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,2017,168,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,2018,0,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,2019,3110,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,2020,0,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,2021,0,NA,NA,NA,NA,NA,0,TRUE,
+US_Comm,2022,0,NA,NA,NA,NA,NA,0,TRUE,

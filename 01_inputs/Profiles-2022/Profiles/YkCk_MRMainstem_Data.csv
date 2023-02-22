@@ -1,0 +1,14 @@
+#Annual estimates of Drainage_Wide Abundance Based on Lower River Mark Recapture,,,,,,,,,
+#Year = Run year,,,,,,,,,
+#Estimate = run size of all  Chinook  using drainage-wide reconstruction from file 2000_2004_MR.csv provided by Zach Liller,,,,,,,,,
+#SE = Standard Error calculated based on INSERT,,,,,,,,,
+#p10 and p90 = 10th abd 90th percentiles of the ?posterior distribution?,,,,,,,,,
+#Variance  = Calculated based on INSERT,,,,,,,,,
+#CV = Coefficient of Variation = SE / Estimate,,,,,,,,,
+#TEST,,,,,,,,,
+Year,Type,Estimate,SE,p10,p90,Variance,CV,Use,UseNotes
+2000,MR,116176,18449.45425,NA,NA,NA,NA,TRUE,Sum of large (>630) and small estimates
+2001,MR,365929,48888.68877,NA,NA,NA,NA,TRUE,Sum of large (>640) and small estimates
+2002,MR,202678,16754.65001,NA,NA,NA,NA,TRUE,Sum of large (>650) and small estimates
+2003,MR,309887,19274.762,NA,NA,NA,NA,TRUE,Sum of large (>650) and small estimates
+2004,MR,229739,16682,NA,NA,NA,NA,TRUE,"Large (>520) estimate only, very few small fish."

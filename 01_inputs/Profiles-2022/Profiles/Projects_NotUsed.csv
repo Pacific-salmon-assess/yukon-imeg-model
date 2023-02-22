@@ -1,0 +1,20 @@
+﻿Seq,Stock,Project,Comment
+1,All,Lower Yukon Test Fishery,"Many years missing catch data for drift, set or both. Only have daily CPUE data"
+2,Lower,Anvik Sonar,"Project directed on Summer chum. Observe a small numbner of Chinook, but difficult to appportion species."
+3,Lower,Marshall Test Fishery,Operated for several years. Data not yet in available in digital format.
+4,Lower,South Fork Koyukuk weir,Not included because only a very short dataset was available
+5,Middle,Rampart Rapids,Most CPUE data is not useful for run reconstructions. Rapids TFW from 2000-2011 chinook salmon CPUE compared to Border passage has an R2 of 0.13. Most years CPUE projects match up with timing but there have been extreme high water events that stacks fish up. Rapids is a an area particularly prone to this since the water is flowing through a canyon of rock and water velocities become so great even barges have to wait it out to pass.
+6,Middle,Chatanika River Surveys,Tower from 1998 to 2005. Also has aerial and boat surveys off and on since 1980 and a M/R project in 1997. Estimates ranged from a few hundred to  few  thousand fish. Data not readily available and considered low priority for run reconstruction.
+7,Middle,Tanana River sonar,Not included because only a very short dataset was available
+8,Middle,Goodpaster intensive surveys,"Goodpaster tower and aerial surveys are documented in this report. Intensive surveys conducted as part of the Pogo gold mine environmental assessments are not included, because they do not provide a consistent time series for run reconstruction."
+9,Middle,Manley Fish Wheel,Operated for several years. Data not yet in available in digital format.
+10,Middle,Nenana Fish Wheel,Operated for several years. Data not yet in available in digital format.
+11,Middle,Sub 5-A Fish Wheel,Operated for several years. Data not yet in available in digital format.
+12,Lower or Middle,Other,"Unless otherwise noted elsewhere in this report, a comprehensive data review was not conducted for projects identified in ADF&G OceanAK databased with a max count less than 1,000 fish. In general, U.S. tributary assessment projects with small abundance counts (especially when combined with infrequent survey coverage) were considered low priority and unlikely to provide meaningful information for estimating Canadian-origin Chinook abundance."
+13,Canada,Chandindu Weir,Issues with high water levels leading to an incomplete dataset over a relatively short time period. Operated from 1998-2003. 
+14,Canada,Klondike Sonar,"Not included as short dataset (2009 - 2011, 2020 - current) and operational during period of Eagle Sonar. Currently Trondek Hwechin operated. "
+15,Canada,McQuesten Aerial,"coverage varied, inconsistent timing of survey"
+16,Canada,Pelly Sonar,Not included as short dataset (2009 to current) and operational during period of Eagle Sonar. Selkirk First Nation project. 
+17,Canada,Takhini Sonar,"Not included as short dataset (2017 & 2018, resuming 2021 - Kwanlin Dun First Nation) and operational during period of Eagle Sonar. "
+18,Canada,Michie Creek Weir and Foot Surveys,"Various types of enumeration including weir (1993, 1994, 1998, 1999) and redd counts (2004-current), but short datasets and above the Whitehorse Rapids Dam. Relatively small number of spawners enumerated. Project led by Kwanlin Dun First Nation. "
+19,Canada,Wolf Creek Weir ,Weir on small tributary above the Whitehorse Rapids Dam. Relatively small number of spawners enumerated. Operated for short period in 1990s. 

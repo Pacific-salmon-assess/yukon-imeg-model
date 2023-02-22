@@ -1,0 +1,6 @@
+Years_Affected,Potential_Issue
+1997,Last day of tower count not included in database as compared to daily count data in Crawford and Lingnau 2004. Including last day of count to season total estimate found in database.
+1998,Not all daily tower counts in OceanAK database match those in Crawford and Lingnau 2004. Interpolation for missed counts updated in database. Using season total from database
+1999,Not all daily tower counts in OceanAK database match those in Crawford and Lingnau 2004. Interpolation for missed counts updated in database. Using season total from database
+2002,Daily counts on July 25 and 26 from the database do not match those in Crawford and Lingnau 2004. Looks to be data entry error in database. Using season total from Crawford and Lingnau 2004. (i.e. Not all daily tower counts in OceanAK database match those in Crawford and Lingnau 2004 but season total matches. Using season total from database.)
+2003,Not all daily weir counts in OceanAK database match those in Crawford and Lingnau 2004. Counts expanded through postseason analysis and considered partial count due to high water. Using season total count from Crawford and Lingnau 2004.

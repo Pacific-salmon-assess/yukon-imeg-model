@@ -1,0 +1,46 @@
+# Annual estimates of Tatchun Chinook,,,,,,,,,
+# Overview of site and current methods at https://www.yukonriverpanel.com/re-fund-project/tatchun-creek-chinook-enumeration/adfg=sonar.site_info&site=16,,,,,,,,,
+# Year = Run year,,,,,,,,,
+# Estimate = run size of XYZ Chinook at in the ?Tatchun River?,,,,,,,,,
+# SE = Standard Error calculated based on INSERT,,,,,,,,,
+# p10 and p90 = 10th abd 90th percentiles of the ?posterior distribution?,,,,,,,,,
+# Variance  = Calculated based on INSERT,,,,,,,,,
+# CV = Coefficient of Variation = SE / Estimate,,,,,,,,,
+Year, Estimate,Type,SE,p10,p90,Variance,CV,Use,UseNotes
+1966,7,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1967,NA,NA,NA,NA,NA,NA,NA,NA,TBI
+1968,NA,NA,NA,NA,NA,NA,NA,NA,TBI
+1969,NA,NA,NA,NA,NA,NA,NA,NA,TBI
+1970,100,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1971,130,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1972,80,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1973,99,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1974,192,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1975,175,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1976,52,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1977,150,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1978,200,boat,NA,NA,NA,NA,NA,FALSE,different survey method
+1979,150,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1980,222,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1981,133,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1982,73,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1983,264,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1984,153,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1985,190,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1986,155,aerial,NA,NA,NA,NA,NA,FALSE,different survey method
+1987,159,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1988,152,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1989,100,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1990,643,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1991,NA,NA,NA,NA,NA,NA,NA,NA,TBI
+1992,106,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1993,183,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1994,477,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1995,397,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1996,423,foot,NA,NA,NA,NA,NA,TRUE,TBI
+1997,1198,weir,NA,NA,NA,NA,NA,TRUE,TBI
+1998,405,weir,NA,NA,NA,NA,NA,TRUE,TBI
+1999,252,weir,NA,NA,NA,NA,NA,TRUE,TBI
+2000,276,weir,NA,NA,NA,NA,NA,TRUE,TBI
+2021,17,weir,NA,NA,NA,NA,NA,TRUE,TBI
+2022,217,weir,NA,NA,NA,NA,NA,TRUE,TBI

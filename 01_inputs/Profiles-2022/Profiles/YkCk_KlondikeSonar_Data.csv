@@ -1,0 +1,13 @@
+# Annual estimates run size of adult Chinook salmon larger than X at Klondike Sonar,,,,,,
+# Overview of site and methods at https://www.yukonriverpanel.com/re-fund-project/klondike-river-sonar-project/,,,,,,
+# Year = Run year,,,,,,
+# Estimate = run size,,,,,,
+# SE = Standard Error calculated based on INSERT,,,,,,
+# p10 and p90 = 10th abd 90th percentiles of the ?posterior distribution?,,,,,,
+Year,Estimate ,SE,p10,p90,Use,UseNotes
+2009,5147,NA,NA,NA,TRUE,TBI
+2010,803,NA,NA,NA,TRUE,TBI
+2011,1181,NA,NA,NA,TRUE,TBI
+2020,470,NA,NA,NA,TRUE,TBI
+2021,855,NA,NA,NA,TRUE,TBI
+2022,253,NA,NA,NA,TRUE,TBI

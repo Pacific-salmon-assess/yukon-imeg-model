@@ -1,0 +1,32 @@
+# Annual estimates of Henshaw Creek  Chinook Escapement,,,,,,,,,,,,
+# Overview of site and current methods at ??ANY??,,,,,,,,,,,,
+# Year = Run year,,,,,,,,,,,,
+# Estimate = run size of XYZ Chinook at in the Salcha River,,,,,,,,,,,,
+# SE = Standard Error calculated based on INSERT,,,,,,,,,,,,
+# p10 and p90 = 10th abd 90th percentiles of the ?posterior distribution?,,,,,,,,,,,,
+# Variance  = Calculated based on INSERT,,,,,,,,,,,,
+# CV = Coefficient of Variation = SE / Estimate,,,,,,,,,,,,
+Year, Estimate,Type,SE,p10,p90,Variance,CV,Use,UseNotes,StartDate,EndDate,DaysActive
+2000,193,Weir,NA,NA,NA,NA,NA,TRUE,NA,7/8/2000,8/13/2000,36
+2001,1091,Weir,NA,NA,NA,NA,NA,TRUE,NA,7/1/2001,8/12/2001,42
+2002,649,Weir,NA,NA,NA,NA,NA,TRUE,NA,6/29/2002,8/2/2002,34
+2003,748,Weir,NA,NA,NA,NA,NA,TRUE,NA,6/26/2003,8/5/2003,40
+2004,1247,Weir,NA,NA,NA,NA,NA,TRUE,NA,6/21/2004,8/6/2004,46
+2005,1059,Weir,NA,NA,NA,NA,NA,TRUE,NA,7/1/2005,8/8/2005,38
+2006,NA,Weir,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+2007,740,Weir,NA,NA,NA,NA,NA,TRUE,NA,6/28/2007,7/31/2007,33
+2008,766,Weir,NA,NA,NA,NA,NA,TRUE,NA,7/2/2008,8/8/2008,37
+2009,1637,Weir,NA,NA,NA,NA,NA,TRUE,NA,7/5/2009,8/7/2009,33
+2010,857,Weir,NA,NA,NA,NA,NA,TRUE,4 days with high water were filled in with linear interpolation,6/23/2010,8/8/2010,46
+2011,1796,Weir,NA,NA,NA,NA,NA,TRUE,NA,7/3/2011,8/2/2011,30
+2012,922,Weir,NA,NA,NA,NA,NA,TRUE,NA,6/30/2012,8/4/2012,35
+2013,772,Weir,NA,NA,NA,NA,NA,TRUE,5 days with high water were filled in with linear interpolation,6/30/2013,8/5/2013,36
+2014,NA,Weir,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+2015,2391,Weir,NA,NA,NA,NA,NA,TRUE,NA,6/24/2015,8/5/2015,42
+2016,1354,Weir,NA,NA,NA,NA,NA,TRUE,1 day with high water was filled in with linear interpolation,6/26/2016,8/1/2016,36
+2017,677,Weir,NA,NA,NA,NA,NA,TRUE,NA,6/25/2017,7/30/2017,35
+2018,NA,Weir,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+2019,441,Weir,NA,NA,NA,NA,NA,TRUE,1 day with smoke was filled in with linear interpolation,6/30/2019,8/2/2019,33
+2020,NA,Weir,NA,NA,NA,NA,NA,NA,,,,
+2021,130,Weir,NA,NA,NA,NA,NA,TRUE,,,,
+2022,NA,Weir,NA,NA,NA,NA,NA,NA,,,,

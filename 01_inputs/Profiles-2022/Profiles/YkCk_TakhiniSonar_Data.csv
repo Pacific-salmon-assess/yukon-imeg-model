@@ -1,0 +1,13 @@
+# Annual estimates run size of adult Chinook salmon larger than X at Takhini Sonar,,,,,,,,
+# Overview of site and methods at https://www.yukonriverpanel.com/re-fund-project/teslin-river-chinook-sonar-project/,,,,,,,,
+# Year = Run year,,,,,,,,
+# Estimate = run size,,,,,,,,
+# SE = Standard Error calculated based on INSERT,,,,,,,,
+# p10 and p90 = 10th and 90th percentiles of the ?posterior distribution?,,,,,,,,
+Year,Estimate ,SE,p10,p90,Lower,Upper,Use,UseNotes
+2017,1872,14.5,NA,NA,NA,NA,TRUE,TBI
+2018,1554,57.5,NA,NA,NA,NA,TRUE,TBI
+2019,NA,NA,NA,NA,NA,NA,NA,NA
+2020,NA,NA,NA,NA,NA,NA,NA,NA
+2021,257,NA,NA,NA,NA,NA,TRUE,TBI
+2022,476,NA,NA,NA,NA,NA,TRUE,TBI

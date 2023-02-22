@@ -1,0 +1,548 @@
+---
+title: "Yukon Chinook salmon run-reconstructions and reference points"
+date: "2023-02-22"
+output:
+  html_document:
+    collapsed: no
+    fig_caption: yes
+    highlight: espresso
+    number_sections: yes
+    smooth_scroll: yes
+    theme: sandstone
+    toc: yes
+    toc_float: yes
+    keep_md: true
+---
+```{=html}
+<style type="text/css">
+
+body{ /* Normal  */
+      font-size: 15px;
+  }
+td {  /* Table  */
+  font-size: 14px;
+}
+h1.title {
+  font-size: 24px;
+  color: Black;
+}
+h1 { /* Header 1 */
+  font-size: 19px;
+  color: Black;
+}
+h2 { /* Header 2 */
+    font-size: 16px;
+  color: Black;
+}
+</style>
+```
+This document summarizes run-reconstructions for lower, middle, and upper (Canadian) Yukon River Chinook salmon (*Oncorhynchus tshawytscha*) stock aggregates as well as biological reference points for the Canadian stock. These estimates are based on a integrated state-space run reconstruction and spawner-recruitment model fit to data (1981-2022) from various assessment projects that estimate mainstem passage, harvests, tributary escapements, stock-proportions, and age-composition, under a single Bayesian estimation framework. 
+
+Full model details and sensitivity analyses are described in: 
+
+>Connors, B.M., Bradley C.A., Cunningham C., Hamazaki T., and Liller, Z.W. 2022. Estimates of biological reference points for the Canadian-origin Yukon River mainstem Chinook salmon (*Oncorhynchus tshawytscha*) stock aggregate. DFO Can. Sci. Advis. Sec. Res. Doc. 2022/031.iv + 100 p.
+```{r setup, include=FALSE}
+# Settings and libraries
+knitr::opts_chunk$set(echo = FALSE, message=FALSE, cache=FALSE, warning = FALSE, include=TRUE)
+knitr::opts_chunk$set(dpi=300)
+options(scipen=1, digits=4)
+
+library(tidyverse)
+library(dplyr)
+library(ggthemes)
+library(rstan)
+library(rstantools)
+library(here)
+library(beepr)
+library(BEST)
+library(tidybayes)
+library(kableExtra)
+library(ggthemes)
+library(mcmcplots)
+library(bayesplot)
+library(reshape2)
+library(ggpubr)
+library(viridis)
+library(gsl)
+# Read in Model Data and Output Files for each of the three models (base/body count, total eggs and total egg mass versions)
+stan.fit.bodies <- readRDS(file=file.path("03_outputs","base.stan.fit.2022.rds"))
+stan.data.bodies <- readRDS(file=file.path("03_outputs","base.stan.data.2022.rds"))
+model_bodies_pars <- rstan::extract(stan.fit.bodies)
+
+# Benchmarks
+max_samples <- dim(model_bodies_pars$lnalpha_c)
+
+sr_years <- stan.data.bodies$years
+nyrs <- length(sr_years)
+
+bench <- matrix(NA,max_samples,1,
+                dimnames = list(seq(1:max_samples),c("U_msr")))
+
+spw <- seq(1,200000, length.out = 10000)
+
+for(i in 1:max_samples){
+  r <- sample(seq(1,max_samples),1,replace=T)
+  a <- model_bodies_pars$lnalpha_c[r]
+  b <- model_bodies_pars$beta[r]
+  smsy <- model_bodies_pars$Smsy_Sch_corr[r]
+  SR_pred <- (exp(a)*spw*exp(-b*spw))
+  
+  yield_avg <- SR_pred-spw
+  hr <- yield_avg/SR_pred
+  bench[i,1] <- hr[which.max(SR_pred)]
+}
+
+bench.quant <- apply(bench, 2, quantile, probs=c(0.025,0.25,0.5,0.75,0.975), na.rm=T)
+
+benchmarks <- summary(stan.fit.bodies, pars= c( "lnalpha_c","beta", "sigma_R", "phi", "S_max", "S_eq_c", "Smsy_Sch_corr","Umsy_Sch_corr"))$summary[,c(1,4,6,8:10)]
+
+umsr <- c(mean(bench[,1]),bench.quant[1,1],bench.quant[3,1], bench.quant[5,1],NA,NA)
+
+benchmarks2 <- rbind(benchmarks,umsr)
+
+rownames(benchmarks2) <- c("log (alpha)", "beta", "sigma R", "phi", "Smax", "Seq", "Smsy", "Umsy", "Umsr")
+
+benchmarks2 <- benchmarks2[,c(1,3,2,4:6)]
+
+```
+
+# Figures
+
+## Run-reconstructions
+
+```{r fig1, echo=FALSE, fig.align = "center", out.width = '90%'}
+# summarize run estimates
+canrun <- model_bodies_pars$can_run
+canrun.quant <- t(apply(canrun, 2, quantile, probs=c(0.025,0.5,0.975)))/1000
+midrun <- model_bodies_pars$mid_run
+midrun.quant <- t(apply(midrun, 2, quantile, probs=c(0.025,0.5,0.975)))/1000
+lowrun <- model_bodies_pars$low_run
+lowrun.quant <- t(apply(lowrun, 2, quantile, probs=c(0.025,0.5,0.975)))/1000
+totrun <- canrun + midrun + lowrun
+totrun.quant <- t(apply(totrun, 2, quantile, probs=c(0.025,0.5,0.975)))/1000
+
+#summarize esc estimates
+canesc <- model_bodies_pars$canesc
+canesc.quant <- t(apply(canesc, 2, quantile, probs=c(0.025,0.5,0.975)))/1000
+midesc <- model_bodies_pars$midesc
+midesc.quant <-t(apply(midesc, 2, quantile, probs=c(0.025,0.5,0.975)))/1000
+lowesc <- model_bodies_pars$lowesc
+lowesc.quant <- t(apply(lowesc, 2, quantile, probs=c(0.025,0.5,0.975)))/1000
+totesc <- canesc + midesc + lowesc
+totesc.quant <- t(apply(totesc, 2, quantile, probs=c(0.025,0.5,0.975)))/1000
+
+#rm(canrun, midrun, lowrun, totrun, canesc, midesc, lowesc, totesc)
+
+#median(totrun); median(canrun);median(midrun); median(lowrun)
+#max(totrun.quant[,2]); min(totrun.quant[,2])
+#run_cor <- cor(cbind(canrun.quant[,2],midrun.quant[,2],lowrun.quant[,2]))
+#median(run_cor[row(run_cor)!=col(run_cor)])
+
+#dataframe
+counts.sum <- rbind(canrun.quant, midrun.quant, lowrun.quant, totrun.quant, canesc.quant,
+                    midesc.quant, lowesc.quant, totesc.quant)
+colnames(counts.sum) <- c("low95", "med50", "hi95")
+counts.fig <- data.frame(year = rep(sr_years,8), 
+                         stock = rep(c("Canada", "Middle", "Lower", "Total"), 
+                                  each = nyrs), 
+                         count = rep(c("Run", "Escapement"), 
+                                  each = nyrs*4), 
+                         counts.sum, stringsAsFactors = TRUE)
+
+#summarize harvest estimates
+canhar <- model_bodies_pars$can_run - model_bodies_pars$canesc
+canhar.quant <- t(apply(canhar, 2, quantile, probs=c(0.025,0.5,0.975)))
+midhar <- model_bodies_pars$mid_run - model_bodies_pars$midesc
+midhar.quant <-t(apply(midhar, 2, quantile, probs=c(0.025,0.5,0.975)))
+lowhar <- model_bodies_pars$low_run - model_bodies_pars$lowesc
+lowhar.quant <- t(apply(lowhar, 2, quantile, probs=c(0.025,0.5,0.975)))
+tothar <- canhar + midhar + lowhar
+tothar.quant <- t(apply(tothar, 2, quantile, probs=c(0.025,0.5,0.975)))
+
+#summarize harvest rate estimates
+canharrate <- ((model_bodies_pars$can_run - model_bodies_pars$canesc)/model_bodies_pars$can_run)*100
+canharrate.quant <- t(apply(canharrate, 2, quantile, probs=c(0.025,0.5,0.975)))
+midharrate <- ((model_bodies_pars$mid_run - model_bodies_pars$midesc)/model_bodies_pars$mid_run)*100
+midharrate.quant <-t(apply(midharrate, 2, quantile, probs=c(0.025,0.5,0.975)))
+lowharrate <- ((model_bodies_pars$low_run - model_bodies_pars$lowesc)/model_bodies_pars$low_run)*100
+lowharrate.quant <- t(apply(lowharrate, 2, quantile, probs=c(0.025,0.5,0.975)))
+totharrate <- ((canhar + midhar + lowhar)/(canrun + midrun + lowrun))*100
+totharrate.quant <- t(apply(totharrate, 2, quantile, probs=c(0.025,0.5,0.975)))
+
+#rm(canhar, midhar, lowhar, tothar, canharrate, midharrate, lowharrate, totharrate)
+
+#max(canharrate.quant[,2]); min(canharrate.quant[,2]); median(canharrate.quant[,2])
+#max(midharrate.quant[,2]); min(midharrate.quant[,2]); median(midharrate.quant[,2])
+#max(lowharrate.quant[,2]); min(lowharrate.quant[,2]); median(lowharrate.quant[,2])
+
+#dataframe
+counts.sum <- rbind(canhar.quant, midhar.quant, lowhar.quant, tothar.quant, canharrate.quant,
+                    midharrate.quant, lowharrate.quant, totharrate.quant)
+colnames(counts.sum) <- c("low95", "med50", "hi95")
+harvest.fig <- data.frame(year = rep(sr_years,8), 
+                         stock = rep(c("Canada", "Middle", "Lower", "Total"), 
+                                  each = nyrs), 
+                         count = rep(c("Harvest", "Harvest rate"), 
+                                  each = nyrs*4), 
+                         counts.sum, stringsAsFactors = TRUE)
+
+
+harvest.fig$stock <- factor(harvest.fig$stock, levels = c("Canada", "Middle", "Lower", "Total"))
+
+
+b <- ggplot(harvest.fig %>% filter(count=="Harvest rate")) + 
+  geom_ribbon(aes(x = year, ymin = low95, ymax = hi95, col = count, fill = count), alpha=0.5) +
+  geom_line(aes(x = year, y = med50, col = count), size = 1) + 
+  ylab("Harvest rate (%)") +
+  xlab("Year") +
+  scale_color_manual(values=c('#999999'))+
+  scale_fill_manual(values=c('#999999')) +
+  scale_y_continuous(position = "right") +
+  theme_bw() +
+  theme(legend.position = "none",
+        plot.margin = margin(40,20,0.5,0.5)) +
+  facet_wrap(~stock, nrow=4)
+
+counts.fig$stock <- factor(counts.fig$stock, levels = c("Canada", "Middle", "Lower", "Total"))
+
+a <- ggplot(counts.fig) + 
+  geom_ribbon(aes(x = year, ymin = low95, ymax = hi95, col = count, fill = count), alpha=0.5) +
+  geom_line(aes(x = year, y = med50, col = count), size = 1) + 
+  ylab("Fish (000s)") +
+  xlab("Year") +
+  scale_color_manual(values=c('#999999','#E69F00')) +
+  scale_fill_manual(values=c('#999999', '#E69F00')) +
+  theme_bw() +
+  theme(legend.position = "top",
+        legend.title = element_blank(),
+        plot.margin = margin(0.5,20,0.5,0.5)) +
+  facet_wrap(~stock, nrow=4, scales = "free_y")
+
+g <- ggarrange(a,b, 
+               ncol = 2, 
+               labels = c("a", "b"),
+               widths = c(1, 1),
+               label.y = c(0.935,0.935),
+               label.x = c(0,-0.08))
+
+print(g)
+```
+
+**Figure 1**. Reconstructed (a) harvest rates and (b) total run size and spawning escapements of Yukon River Chinook salmon by stock and combined. Thick lines are medians and shaded areas indicate 95% credible intervals.
+
+## CDN-origin spawner-recruitment relationship
+
+```{r fig2, echo=FALSE, fig.align = "center", out.width = '80%'}
+spwn <- exp(model_bodies_pars$lnS)
+spwn.quant <- apply(spwn, 2, quantile, probs=c(0.05,0.5,0.95))[,1:(length(sr_years)-4)]
+
+rec <-exp(model_bodies_pars$lnR)
+rec.quant <- apply(rec, 2, quantile, probs=c(0.05,0.5,0.95))[,8:dim(model_bodies_pars$R)[2]]
+
+rps <- rec[,8:dim(model_bodies_pars$R)[2]]/spwn[,1:(length(sr_years)-4)]
+rps.quant <- apply(rps, 2, quantile, probs=c(0.025,0.5,0.975))
+
+brood_t <- as.data.frame(cbind(sr_years[1:(length(sr_years)-4)],t(spwn.quant), t(rec.quant), t(rps.quant)))
+colnames(brood_t) <- c("BroodYear","S_lwr","S_med","S_upr","R_lwr","R_med","R_upr","RpS_lwr","RpS_med","RpS_upr")
+
+brood_t <- as.data.frame(brood_t)
+
+# SR relationship
+spw <- seq(0,max(brood_t[,4]),length.out=100)
+SR_pred <- matrix(NA,100,max_samples)
+SR_early <- matrix(NA,100,max_samples)
+SR_late <- matrix(NA,100,max_samples)
+
+for(i in 1:max_samples){
+  r <- sample(seq(1,max_samples),1,replace=T)
+  a <- model_bodies_pars$lnalpha_c[r]
+  a_t <- model_bodies_pars$lnalpha_y[r,c(8:(dim(model_bodies_pars$lnalpha_y)[2]-4))]
+  b <- model_bodies_pars$beta[r]
+  
+  SR_pred[,i] <- (exp(a)*spw*exp(-b*spw))
+  SR_early[,i] <- (exp(median(a_t[1:11]))*spw*exp(-b*spw))
+  SR_late[,i] <- (exp(median(a_t[23:33]))*spw*exp(-b*spw))
+}
+
+SR_pred <- cbind(spw,t(apply(SR_pred,c(1),quantile,probs=c(0.10,0.5,0.9),na.rm=T)))
+colnames(SR_pred) <- c("Spawn", "Rec_lwr","Rec_med","Rec_upr")
+SR_pred <- as.data.frame(SR_pred)
+
+a <- ggplot() +
+  geom_ribbon(data = SR_pred, aes(x = Spawn, ymin = Rec_lwr, ymax = Rec_upr),
+              fill = "grey80", alpha=0.5, linetype=2, colour="gray46") +
+  geom_line(data = SR_pred, aes(x = Spawn, y = Rec_med), color="black", size = 1) +
+  geom_errorbar(data = brood_t, aes(x= S_med, y = R_med, ymin = R_lwr, ymax = R_upr),
+                colour="grey", width=0, size=0.3) +
+  geom_errorbarh(data = brood_t, aes(x= S_med, y = R_med, xmin = S_lwr, xmax = S_upr),
+                 height=0, colour = "grey", height = 0, size = 0.3) +
+  geom_point(data = brood_t, aes(x = S_med, y = R_med, color=BroodYear, width = 0.9), size = 3)+
+  coord_cartesian(xlim=c(0, 130000), ylim=c(0,max(brood_t[,7]))) +
+  scale_colour_viridis_c()+
+  xlab("Spawners") +
+  ylab("Recruits") +
+  theme_bw() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        legend.key.size = unit(0.4, "cm"),
+        legend.title = element_text(size=9),
+        legend.text = element_text(size=8))+
+  geom_abline(intercept = 0, slope = 1,col="dark grey")
+
+pred <-model_bodies_pars$lnalpha_y
+pred.quant <- apply(pred, 2, quantile, probs=c(0.025,0.25,0.5,0.75,0.975), na.rm=TRUE)[,8:dim(model_bodies_pars$lnalpha_y)[2]]
+
+log_prod_t <- as.data.frame(cbind(sr_years[1:(length(sr_years)-4)], t(pred.quant)))
+colnames(log_prod_t) <- c("year","lwr","midlwr","mid","midupper","upper")
+
+print(a)
+
+
+```
+
+**Figure 2**. Spawner-recruitment relationship and productivity over time.(a) Relationship between recruitment and spawner abundance for Canadian-origin Yukon Chinook salmon from 1982 to 2019. Error bars and grey band are 95% credible intervals, thick black line is the expected relationship. (b) Approximate annual estimates of time-varying productivity (sum ln(a) and log residuals exponentiated) with 50th and 95th credible intervals dashed line at replacement.
+
+## Probability profiles
+
+```{r fig3, echo=FALSE, fig.align = "center", fig.height=7}
+spw <- seq(0,max(brood_t[,4]),length.out=100)
+
+Profiles <- array(NA, dim = c(length(spw),max_samples,9))
+
+for(i in 1:max_samples){
+  r <- sample(seq(1,max_samples),1,replace=T)
+  a <- model_bodies_pars$lnalpha_c[r]
+  b <- model_bodies_pars$beta[r]
+  S_msy_c <- model_bodies_pars$Smsy_Sch_corr[r]
+  R_msy_c <- S_msy_c*exp(a-b*S_msy_c)
+  msy_c <- R_msy_c - S_msy_c
+  U_max_c <- 1-(1/exp(a))
+  Umsy_Sch_corr <- model_bodies_pars$Umsy_Sch_corr[r]
+
+  for(j in 1:length(spw)){
+    spw_star <- spw[j]
+    R_star <- spw_star*exp(a-b*spw_star)
+    sus_yield <- R_star - spw_star
+    U <- ifelse(sus_yield/R_star < 0, 1, sus_yield/R_star)
+    Profiles[j,i,1] <- ifelse(sus_yield > 0.9*msy_c, 1, 0) # probability yield > 90% of MSY
+    Profiles[j,i,2] <- ifelse(sus_yield > 0.8*msy_c, 1, 0) # probability yield > 80% of MSY
+    Profiles[j,i,3] <- ifelse(sus_yield > 0.7*msy_c, 1, 0) # probability yield > 70% of MSY
+    Profiles[j,i,4] <- ifelse(R_star > 0.9*R_msy_c, 1, 0) # probability recruitment > 90% of MSR
+    Profiles[j,i,5] <- ifelse(R_star > 0.8*R_msy_c, 1, 0) # probability recruitment > 80% of MSR
+    Profiles[j,i,6] <- ifelse(R_star > 0.7*R_msy_c, 1, 0) # probability recruitment > 70% of MSR
+    if(sus_yield < (0.9*msy_c) & spw_star < S_msy_c){
+      Profiles[j,i,7] <- 1
+    } else {
+      Profiles[j,i,7] <- 0
+      }
+    if(sus_yield < (0.8*msy_c) & spw_star < S_msy_c){
+      Profiles[j,i,8] <- 1
+    } else {
+      Profiles[j,i,8] <- 0
+      }
+    if(sus_yield < (0.7*msy_c) & spw_star < S_msy_c){
+      Profiles[j,i,9] <- 1
+    } else {
+      Profiles[j,i,9] <- 0
+      }    
+        }
+}
+
+profiles_median <- cbind(spw,apply(Profiles,c(1,3),mean, na.rm=T))
+
+colnames(profiles_median) <- c("Spawners","90% MSY","80% MSY","70% MSY", "90% MSR","80% MSR","70% MSR", "90% MSY ", "80% MSY ", "70% MSY ")
+profiles_median <- as.data.frame(profiles_median)
+
+long_yield_profiles <- profiles_median%>%
+  select("Spawners","90% MSY","80% MSY","70% MSY")%>%
+  pivot_longer(!Spawners, names_to = "Metric", values_to = "perc")
+
+a <- ggplot(long_yield_profiles, aes(x = Spawners, y = perc, group = Metric, color = Metric)) +
+      geom_line(size = 1.5) +
+      scale_color_viridis(discrete = TRUE) +
+      ylab("Probability") +
+      theme(legend.position = "none") +
+      theme_bw() +
+      theme(axis.title.x = element_blank(),
+      axis.text.x = element_blank(),
+      legend.title = element_blank()) + 
+  geom_rug(data = brood_t,
+           aes(x = S_med),
+           inherit.aes = FALSE,
+           sides="b")
+
+long_rec_profiles <- profiles_median%>%
+  select("Spawners","90% MSR","80% MSR","70% MSR")%>%
+  pivot_longer(!Spawners, names_to = "Metric", values_to = "perc")
+
+b <- ggplot(long_rec_profiles, aes(x = Spawners, y = perc, group = Metric, color = Metric)) +
+      geom_line(size = 1.5) +
+      scale_color_viridis(discrete = TRUE) +
+      ylab("Probability") +
+      theme(legend.position = "none") +
+      theme_bw() +
+      theme(axis.title.x = element_blank(),
+      axis.text.x = element_blank(),
+      legend.title = element_blank()) + 
+  geom_rug(data = brood_t,
+           aes(x = S_med),
+           inherit.aes = FALSE,
+           sides="b")
+
+long_overfish_profiles <- profiles_median%>%
+  select("Spawners", "90% MSY ", "80% MSY ", "70% MSY ")%>%
+  pivot_longer(!Spawners, names_to = "Objective", values_to = "perc")
+
+c <- ggplot(long_overfish_profiles, aes(x = Spawners, y = perc, group = Objective, color = Objective)) +
+  geom_line(size = 1.5) +
+  scale_color_viridis(discrete = TRUE) +
+  xlab("Spawners") +
+  ylab("Probability ") +
+  theme(legend.position = "none") +
+  theme_bw() +
+  theme(legend.title = element_blank()) + 
+  geom_rug(data = brood_t,
+           aes(x = S_med),
+           inherit.aes = FALSE,
+           sides="b")
+
+g <- ggarrange(a,b,c,nrow =3, labels = c("a", "b", "c"), heights = c(0.75,0.75,0.9))
+print(g)
+```
+
+**Figure 3**. Optimal probability profiles. (a) Optimal yield profile showing the probability that a given spawner abundance is expected to achieve 70%, 80%, or 90% of maximum sustainable yield (MSY). (b) Optimal recruitment profile showing the probability that a given spawner abundance is expected to achieve 70%, 80%, or 90% of maximum sustainable recruitment (S~MSR~). Historic spawning escapements are shown along x-axis. (c) Overfishing profile, calculated as 1 – P(SY > X% of MSY) at S < SMSY , and 0 at S > SMSY , showing the probability that sustained yield (SY) is reduced to less than a percentage (70%, 80%, or 90%) of MSY given a fixed level of escapement.
+
+
+
+# Tables
+
+## CDN run-reconstruction
+
+**Table 1**. Reconstructed total run size, spawning escapements, harvest and harvest rates for the Canadian-origin Yukon River Chinook salmon stock. Shown are posterior medians. 
+
+```{r}
+
+cdn_RR_table <- round(cbind(sr_years, 
+                  canrun.quant[,2]*1000,canesc.quant[,2]*1000,canhar.quant[,2],canharrate.quant[,2]))
+
+colnames(cdn_RR_table) <-c("Year", "Total run", "Escapement", "Harvest", "Harvest rate (%)")
+
+kable(cdn_RR_table,
+      align = "crr") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+
+```
+
+## Lower Yukon River run-reconstruction
+
+**Table 2**. Reconstructed total run size, spawning escapements, harvest and harvest rates for the lower Yukon River Chinook salmon stock. Shown are posterior medians. 
+
+```{r}
+
+lwr_RR_table <- round(cbind(sr_years, 
+                      lowrun.quant[,2]*1000,lowesc.quant[,2]*1000,lowhar.quant[,2],lowharrate.quant[,2]))
+
+colnames(lwr_RR_table) <-c("Year", "Total run", "Escapement", "Harvest", "Harvest rate (%)")
+
+kable(lwr_RR_table,
+      align = "crr") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+
+```
+
+## Middle Yukon River run-reconstruction
+
+**Table 3**. Reconstructed total run size, spawning escapements, harvest and harvest rates for the middle Yukon River Chinook salmon stock. Shown are posterior medians. 
+
+```{r}
+mid_RR_table <- round(cbind(sr_years, 
+                      midrun.quant[,2]*1000,midesc.quant[,2]*1000,midhar.quant[,2],midharrate.quant[,2]))
+
+colnames(mid_RR_table) <-c("Year", "Total run", "Escapement", "Harvest", "Harvest rate (%)")
+
+kable(mid_RR_table,
+      align = "crr") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+
+```
+
+```{r}
+
+RR_table <- rbind(
+  cbind(rep("Canadian",times = dim(cdn_RR_table)[1]),cdn_RR_table),
+  cbind(rep("Lower",times = dim(lwr_RR_table)[1]),lwr_RR_table),
+  cbind(rep("Middle",times = dim(mid_RR_table)[1]),mid_RR_table)
+  
+)
+colnames(RR_table) <-c("Stock", "Year", "Total run", "Escapement", "Harvest", "Harvest rate (%)")
+write.csv(RR_table, "03_outputs/rr-table-2022.csv", row.names = FALSE)
+```
+## CDN spawner-recruitment parameters and reference points
+
+**Table 4**. Posterior means, medians and credible intervals for leading spawner-recruitment parameters and associated biological benchmarks. Also show are estimates of the effective sample size and potential scale reduction factor for parameters and benchmarks estimated by the model.
+
+```{r}
+table.in <- benchmarks2  %>% as.data.frame() %>%
+            mutate(n_eff = prettyNum(round(n_eff),big.mark=",")) %>%
+              rownames_to_column(var= "Variable") %>%
+              dplyr::rename(Mean = mean,Median = "50%",p2.5 = "2.5%",p97.5 = "97.5%","n eff" = n_eff)
+
+#table.in[9,2] <- 0.4265 # hard coded hack
+table.in <- table.in[c(1:8,10),]
+
+table.in$Variable <- c("log (alpha)", "beta","sigma R","phi","Smsr","Seq","Smsy","Umsy","Umsr") # BC: for some reason losing rownames in script above so adding them back in here
+
+# formatting generally done by row or column inside kableExtra, but only by column (Var) in the source data frame
+# this table has a mix of number types in each col and row.
+# need to split, format, and stitch back together
+
+right.cols <- table.in %>% select("n eff",Rhat) %>% mutate(Rhat = round(Rhat,4))
+
+#right.cols <- right.cols[c(1:7,9,8,10),]
+
+pars.chunk <- table.in %>% dplyr::filter(Variable %in% c("log (alpha)", "sigma R","phi")) %>%
+                  select(Variable,Mean, Median, p2.5,p97.5) %>% 
+                  mutate_at(2:5,function(x){ format(round(x,3), nsmall = 3)  }  ) %>%
+                  mutate_at(2:5,function(x){as.character(x)}   )
+
+beta.chunk <- table.in %>% dplyr::filter(Variable %in% c("beta")) %>%
+                  select(Variable,Mean, Median, p2.5,p97.5) %>% 
+                  mutate_at(2:5,function(x){ formatC(x,format="E",digits=3)  }  ) %>%
+                  mutate_at(2:5,function(x){as.character(x)}   )  
+
+pars.chunk <- bind_rows(pars.chunk,beta.chunk) 
+pars.chunk <- pars.chunk[c(1,4,2,3),]
+
+pars.chunk$Variable <- gsub("log \\(alpha\\)","logalpha",pars.chunk$Variable)
+pars.chunk$Variable <- gsub("sigma R","sigmaR",pars.chunk$Variable)
+
+
+bm.chunk <- table.in %>% dplyr::filter(Variable %in% c("Smsr","Seq","Smsy")) %>%
+                  select(Variable,Mean, Median, p2.5,p97.5) %>% 
+                     mutate_at(2:5,function(x){prettyNum(round(x),big.mark = ",")}   )
+
+
+umsy.chunk <- table.in %>% dplyr::filter(Variable %in% c("Umsy","Umsr")) %>%
+                  select(Variable,Mean, Median, p2.5,p97.5) %>% 
+                     mutate_at(2:5,function(x){paste0(round(x*100),"%")}   )
+
+
+
+table.in <- bind_rows(pars.chunk, bm.chunk,umsy.chunk) %>% bind_cols(right.cols) %>%
+               mutate(Variable = recode(Variable,Smsy = "$S_{MSY}$",Seq = "$S_{EQ}$",
+                      Umsy = "$U_{MSY}$",
+                      Smsr = "$S_{MSR}$", beta = "$\\beta$", phi = "$\\phi$", sigmaR = "$\\sigma_R$",
+                      Umsr = "$U_{MSR}$",logalpha = "$ln(\\alpha)$"))
+
+names(table.in) <- gsub("n eff","$n_{eff}$",names(table.in))
+names(table.in) <- gsub("Rhat","$\\\\hat{R}$",names(table.in))
+
+table.in[is.na(table.in)] <-""
+table.in[table.in == "NA"] <-"" # because prettyNum converts to character
+
+kable(table.in,
+      align = "crr") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+
+
+```

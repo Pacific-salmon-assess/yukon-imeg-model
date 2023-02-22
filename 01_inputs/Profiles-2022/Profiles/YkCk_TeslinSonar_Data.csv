@@ -1,0 +1,12 @@
+# Annual estimates run size of adult Chinook salmon larger than X at Teslin Sonar,,,,,,
+# Overview of site and methods at https://www.yukonriverpanel.com/re-fund-project/teslin-river-chinook-sonar-project/,,,,,,
+# Year = Run year,,,,,,
+# Estimate = run size,,,,,,
+# SE = Standard Error calculated based on INSERT,,,,,,
+# p10 and p90 = 10th and 90th percentiles of the ?posterior distribution?,,,,,,
+Year,Estimate ,SE,p10,p90,Use,UseNotes
+2012,3454,NA,NA,NA,FALSE,No Chinook counted on left bank due to high water. Estimate considered a minimum.
+2013,9916,NA,NA,NA,TRUE,TBI
+2014,17507,NA,NA,NA,TRUE,TBI
+2015,20463,NA,NA,NA,TRUE,TBI
+2022,NA,NA,NA,NA,FALSE,No count

@@ -1,0 +1,22 @@
+# Annual estimates of XYZ,,,,,,,
+# Overview of site and methods at XYZ,,,,,,,
+# Year = Run year,,,,,,,
+# Estimate = run size,,,,,,,
+# SE = Standard Error calculated based on INSERT,,,,,,,
+# p10 and p90 = 10th abd 90th percentiles of the ?posterior distribution?,,,,,,,
+Year, Estimate,SE,p10,p90,Agency,Use,UseNotes
+2004,3673,106,NA,NA,?,TRUE,TBI
+2005,1184,70,NA,NA,ADF&G,TRUE,TBI
+2006,2479,100,NA,NA,ADF&G,TRUE,TBI
+2007,1581,82,NA,NA,ADF&G,TRUE,TBI
+2008,1880,85,NA,NA,ADF&G,TRUE,TBI
+2009,4280,167,NA,NA,ADF&G,TRUE,TBI
+2010,1167,67,NA,NA,ADF&G,TRUE,TBI
+2011,1325,NA,NA,NA,BSFA,TRUE,TBI
+2012,752,50,NA,NA,ADF&G,TRUE,TBI
+2013,723,44,NA,NA,ADF&G,TRUE,TBI
+2014,1350,90,NA,NA,ADF&G,TRUE,TBI
+2015,2353,97,NA,NA,ADF&G,TRUE,TBI
+2016,2435,NA,NA,NA,BSFA,TRUE,TBI
+2017,2769,NA,NA,NA,BSFA,TRUE,TBI
+2018,2480,NA,NA,NA,BSFA,TRUE,TBI

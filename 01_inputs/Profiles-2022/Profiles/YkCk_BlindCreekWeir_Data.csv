@@ -1,0 +1,35 @@
+# Annual estimates run size of adult Chinook salmon larger than X at Blind Creek Weir,,,,,,
+# Overview of site and methods at https://www.yukonriverpanel.com/re-fund-project/blind-creek-chinook-salmon-enumeration-weir/,,,,,,
+# Year = Run year,,,,,,
+# Estimate = run size,,,,,,
+# SE = Standard Error calculated based on INSERT,,,,,,
+# p10 and p90 = 10th abd 90th percentiles of the ?posterior distribution?,,,,,,
+Year,Estimate ,SE,p10,p90,Use,UseNotes
+1995,826,NA,NA,NA,FALSE,details lacking to support counts
+1996,NA,NA,NA,NA,NA,TBI
+1997,957,NA,NA,NA,TRUE,TBI
+1998,373,NA,NA,NA,TRUE,TBI
+1999,892,NA,NA,NA,TRUE,TBI
+2000,NA,NA,NA,NA,NA,TBI
+2001,NA,NA,NA,NA,NA,TBI
+2002,NA,NA,NA,NA,NA,TBI
+2003,1155,NA,NA,NA,TRUE,TBI
+2004,792,NA,NA,NA,TRUE,TBI
+2005,525,NA,NA,NA,TRUE,TBI
+2006,677,NA,NA,NA,TRUE,TBI
+2007,304,NA,NA,NA,TRUE,TBI
+2008,276,NA,NA,NA,TRUE,TBI
+2009,716,NA,NA,NA,TRUE,TBI
+2010,270,NA,NA,NA,TRUE,TBI
+2011,360,NA,NA,NA,TRUE,TBI
+2012,157,NA,NA,NA,TRUE,TBI
+2013,312,NA,NA,NA,TRUE,TBI
+2014,602,NA,NA,NA,TRUE,TBI
+2015,964,NA,NA,NA,TRUE,TBI
+2016,664,NA,NA,NA,TRUE,TBI
+2017,NA,NA,NA,NA,NA,TBI
+2018,612,NA,NA,NA,TRUE,TBI
+2019,NA,NA,NA,NA,NA,TBI
+2020,NA,NA,NA,NA,NA,TBI
+2021,NA,NA,NA,NA,NA,TBI
+2022,NA,NA,NA,NA,NA,TBI

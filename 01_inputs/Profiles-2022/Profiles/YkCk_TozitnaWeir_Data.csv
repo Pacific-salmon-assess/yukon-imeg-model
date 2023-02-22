@@ -1,0 +1,18 @@
+# Annual estimates of Tozitna River Chinook Escapement,,,,,,,,,
+# Overview of site and current methods at ??ANY??,,,,,,,,,
+# Year = Run year,,,,,,,,,
+# Estimate = run size of XYZ Chinook at in the Tozitna  River based on weir counts,,,,,,,,,
+# SE = Standard Error calculated based on INSERT,,,,,,,,,
+# p10 and p90 = 10th abd 90th percentiles of the ?posterior distribution?,,,,,,,,,
+# Variance  = Calculated based on INSERT,,,,,,,,,
+# CV = Coefficient of Variation = SE / Estimate,,,,,,,,,
+Year, Estimate,Type,SE,p10,p90,Variance,CV,Use,UseNotes
+2001,2854,Weir,NA,NA,NA,NA,NA,TRUE,TBI
+2002,1441,Weir,NA,NA,NA,NA,NA,TRUE,TBI
+2003,1819,Weir,NA,NA,NA,NA,NA,TRUE,TBI
+2004,1880,Weir,NA,NA,NA,NA,NA,TRUE,TBI
+2005,1611,Weir,NA,NA,NA,NA,NA,TRUE,TBI
+2006,533,Weir,NA,NA,NA,NA,NA,TRUE,TBI
+2007,494,Weir,NA,NA,NA,NA,NA,TRUE,TBI
+2008,681,Weir,NA,NA,NA,NA,NA,TRUE,TBI
+2009,1112,Weir,NA,NA,NA,NA,NA,TRUE,TBI

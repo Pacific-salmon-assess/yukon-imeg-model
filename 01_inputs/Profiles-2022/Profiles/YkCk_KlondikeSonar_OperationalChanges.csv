@@ -1,0 +1,7 @@
+Years,Component,Change_Event
+2009,Cross-Check,"Visual counts, from an elevated river bank, were used to verify the precision of the sonar counts"
+2010 & 2011,Cross-Check,"Four days were spent, each year, in early to mid-August searching for carcasses and sampling for ASL data. 2010 n=20. 2011 n=48."
+2009,Gap Correction,Gaps in daily sonar counts were corrected using expanded observer visual counts during the gap period
+2010 & 2011,Gap Correction,Gaps in daily sonar counts were corrected using expanded counts based on the number of fish per hour derived from the mean 24 hour counts before and after the sonar outage
+2009 & 2010,Coverage Correction,Linear regression model used to extrapolate the number of passing Chinook for an additional nine days after the sonar operations stopped.
+2011,Coverage Correction,Exponential regression model was used to extrapolate the number for an additional nine days after the sonar operations stopped

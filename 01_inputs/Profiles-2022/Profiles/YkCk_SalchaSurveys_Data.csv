@@ -1,0 +1,45 @@
+# Annual estimates of Salcha River Chinook Escapement,,,,,,,,,
+# Overview of site and current methods at ??ANY??,,,,,,,,,
+# Year = Run year,,,,,,,,,
+# Estimate = run size of XYZ Chinook at in the Salcha River,,,,,,,,,
+# SE = Standard Error calculated based on INSERT,,,,,,,,,
+# p10 and p90 = 10th abd 90th percentiles of the ?posterior distribution?,,,,,,,,,
+# Variance  = Calculated based on INSERT,,,,,,,,,
+# CV = Coefficient of Variation = SE / Estimate,,,,,,,,,
+Year, Estimate,Type,SE,p10,p90,Variance,CV,Use,UseNotes
+1987,4771,Mark–Recapture,504,NA,NA,NA,NA,TRUE,TBI
+1988,4322,Mark–Recapture,556,NA,NA,NA,NA,TRUE,TBI
+1989,3294,Mark–Recapture,630,NA,NA,NA,NA,TRUE,TBI
+1990,10728,Mark–Recapture,1404,NA,NA,NA,NA,TRUE,TBI
+1991,5608,Mark–Recapture,664,NA,NA,NA,NA,TRUE,TBI
+1992,7862,Mark–Recapture,975,NA,NA,NA,NA,TRUE,TBI
+1993,10007,Counting Tower,360,NA,NA,NA,NA,TRUE,TBI
+1994,18399,Counting Tower,549,NA,NA,NA,NA,TRUE,TBI
+1995,13643,Counting Tower,471,NA,NA,NA,NA,TRUE,TBI
+1996,7570,Mark–Recapture,1238,NA,NA,NA,NA,TRUE,TBI
+1997,18514,Counting Tower,1043,NA,NA,NA,NA,TRUE,TBI
+1998,5027,Counting Tower,331,NA,NA,NA,NA,TRUE,TBI
+1999,9198,Counting Tower,290,NA,NA,NA,NA,TRUE,TBI
+2000,4595,Counting Tower,802,NA,NA,NA,NA,TRUE,TBI
+2001,13328,Counting Tower,2163,NA,NA,NA,NA,TRUE,TBI
+2002,9000,Counting Tower,160,NA,NA,NA,NA,TRUE,TBI
+2003,15500,Counting Tower,747,NA,NA,NA,NA,TRUE,TBI
+2004,15761,Counting Tower,612,NA,NA,NA,NA,TRUE,TBI
+2005,5988,Counting Tower,163,NA,NA,NA,NA,TRUE,TBI
+2006,10679,Counting Tower,315,NA,NA,NA,NA,TRUE,TBI
+2007,6425,Counting Tower,225,NA,NA,NA,NA,TRUE,TBI
+2008,5415,Counting Tower,169,NA,NA,NA,NA,TRUE,TBI
+2009,12774,Counting Tower,405,NA,NA,NA,NA,TRUE,TBI
+2010,6135,Counting Tower,170,NA,NA,NA,NA,TRUE,TBI
+2011,7200,Counting Tower,NA,NA,NA,NA,NA,NA,TBI
+2012,7165,Counting Tower,163,NA,NA,NA,NA,TRUE,TBI
+2013,5465,Counting Tower,282,NA,NA,NA,NA,TRUE,TBI
+2014,NA,NA,NA,NA,NA,NA,NA,NA,TBI
+2015,6287,Counting Tower,309,NA,NA,NA,NA,TRUE,TBI
+2016,2675,Counting Tower/Sonar/Bayesian hierarchical model,313,NA,NA,NA,NA,TRUE,TBI
+2017,4195,Counting Tower/Sonar,205,NA,NA,NA,NA,TRUE,TBI
+2018,5021,Counting Tower/Sonar/Bayesian hierarchical model,137,NA,NA,NA,NA,TRUE,TBI
+2019,4863,Counting Tower/Sonar/Bayesian hierarchical model,526,NA,NA,NA,NA,TRUE,TBI
+2020,NA,NA,NA,NA,NA,NA,NA,NA,TBI
+2021,2081,Counting Tower/Sonar/Bayesian hierarchical model,98,NA,NA,NA,NA,TRUE,TBI
+2022,1041,Counting Tower,57,NA,NA,NA,NA,TRUE,TBI

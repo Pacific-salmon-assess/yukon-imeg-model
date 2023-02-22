@@ -1,0 +1,72 @@
+# Annual estimates run size of adult Chinook  at Whitehorse Fishway ,,,,,,,
+# Overview of site and methods at https://yukonenergy.ca/media/site_documents/fish_ladder_brochure_eng_new_logo_2018.pdf,,,,,,,
+# Year = Run year,,,,,,,
+# Estimate = run size,,,,,,,
+# SE = Standard Error calculated based on INSERT,,,,,,,
+# p10 and p90 = 10th and 90th percentiles of the ?posterior distribution?,,,,,,,
+Year,Type,Estimate ,SE,p10,p90,Use,UseNotes
+1958,Fishladder,224,NA,NA,NA,TRUE,TBI
+1959,Fishladder,1054,NA,NA,NA,TRUE,TBI
+1960,Fishladder,660,NA,NA,NA,TRUE,TBI
+1961,Fishladder,1068,NA,NA,NA,TRUE,TBI
+1962,Fishladder,1500,NA,NA,NA,TRUE,TBI
+1963,Fishladder,483,NA,NA,NA,TRUE,TBI
+1964,Fishladder,595,NA,NA,NA,TRUE,TBI
+1965,Fishladder,903,NA,NA,NA,TRUE,TBI
+1966,Fishladder,563,NA,NA,NA,TRUE,TBI
+1967,Fishladder,533,NA,NA,NA,TRUE,TBI
+1968,Fishladder,414,NA,NA,NA,TRUE,TBI
+1969,Fishladder,334,NA,NA,NA,TRUE,TBI
+1970,Fishladder,625,NA,NA,NA,TRUE,TBI
+1971,Fishladder,856,NA,NA,NA,TRUE,TBI
+1972,Fishladder,391,NA,NA,NA,TRUE,TBI
+1973,Fishladder,224,NA,NA,NA,TRUE,TBI
+1974,Fishladder,273,NA,NA,NA,TRUE,TBI
+1975,Fishladder,313,NA,NA,NA,TRUE,TBI
+1976,Fishladder,121,NA,NA,NA,TRUE,TBI
+1977,Fishladder,277,NA,NA,NA,TRUE,TBI
+1978,Fishladder,725,NA,NA,NA,TRUE,TBI
+1979,Fishladder,1184,NA,NA,NA,TRUE,TBI
+1980,Fishladder,1383,NA,NA,NA,TRUE,TBI
+1981,Fishladder,1555,NA,NA,NA,TRUE,TBI
+1982,Fishladder,473,NA,NA,NA,TRUE,TBI
+1983,Fishladder,905,NA,NA,NA,TRUE,TBI
+1984,Fishladder,1042,NA,NA,NA,TRUE,TBI
+1985,Fishladder,508,NA,NA,NA,TRUE,TBI
+1986,Fishladder,557,NA,NA,NA,TRUE,TBI
+1987,Fishladder,327,NA,NA,NA,TRUE,TBI
+1988,Fishladder,405,NA,NA,NA,TRUE,TBI
+1989,Fishladder,549,NA,NA,NA,TRUE,TBI
+1990,Fishladder,1407,NA,NA,NA,TRUE,TBI
+1991,Fishladder,1266,NA,NA,NA,TRUE,TBI
+1992,Fishladder,758,NA,NA,NA,TRUE,TBI
+1993,Fishladder,668,NA,NA,NA,TRUE,TBI
+1994,Fishladder,1577,NA,NA,NA,TRUE,TBI
+1995,Fishladder,2103,NA,NA,NA,TRUE,TBI
+1996,Fishladder,2958,NA,NA,NA,TRUE,TBI
+1997,Fishladder,2084,NA,NA,NA,TRUE,TBI
+1998,Fishladder,777,NA,NA,NA,TRUE,TBI
+1999,Fishladder,1118,NA,NA,NA,TRUE,TBI
+2000,Fishladder,677,NA,NA,NA,TRUE,TBI
+2001,Fishladder,988,NA,NA,NA,TRUE,TBI
+2002,Fishladder,605,NA,NA,NA,TRUE,TBI
+2003,Fishladder,1443,NA,NA,NA,TRUE,TBI
+2004,Fishladder,1989,NA,NA,NA,TRUE,TBI
+2005,Fishladder,2632,NA,NA,NA,TRUE,TBI
+2006,Fishladder,1720,NA,NA,NA,TRUE,TBI
+2007,Fishladder,427,NA,NA,NA,TRUE,TBI
+2008,Fishladder,399,NA,NA,NA,TRUE,TBI
+2009,Fishladder,828,NA,NA,NA,TRUE,TBI
+2010,Fishladder,672,NA,NA,NA,TRUE,TBI
+2011,Fishladder,1534,NA,NA,NA,TRUE,TBI
+2012,Fishladder,1030,NA,NA,NA,TRUE,TBI
+2013,Fishladder,1139,NA,NA,NA,TRUE,TBI
+2014,Fishladder,1601,NA,NA,NA,TRUE,TBI
+2015,Fishladder,1465,NA,NA,NA,TRUE,TBI
+2016,Fishladder,1556,NA,NA,NA,TRUE,TBI
+2017,Fishladder,1226,NA,NA,NA,TRUE,TBI
+2018,Fishladder,691,NA,NA,NA,TRUE,TBI
+2019,Fishladder,282,NA,NA,NA,TRUE,TBI
+2020,Fishladder,216,NA,NA,NA,TRUE,TBI
+2021,Fishladder,274,NA,NA,NA,TRUE,TBI
+2022,Fishladder,165,NA,NA,NA,TRUE,TBI

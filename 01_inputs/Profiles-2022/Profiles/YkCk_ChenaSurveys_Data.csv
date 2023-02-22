@@ -1,0 +1,46 @@
+# Annual estimates of Chena Chinook,,,,,,,,,
+# Overview of site and current methods at ??ANY??,,,,,,,,,
+# Year = Run year,,,,,,,,,
+# Estimate = escapement of XYZ Chinook at in the Chenas River,,,,,,,,,
+# SE = Standard Error calculated based on INSERT,,,,,,,,,
+# p10 and p90 = 10th abd 90th percentiles of the ?posterior distribution?,,,,,,,,,
+# Variance  = Calculated based on INSERT,,,,,,,,,
+# CV = Coefficient of Variation = SE / Estimate,,,,,,,,,
+Year, Estimate,Type,SE,p10,p90,Variance,CV,Use,UseNotes
+1986,9065,Mark–Recapture,1080,NA,NA,NA,NA,TRUE,TBI
+1987,6404,Mark–Recapture,557,NA,NA,NA,NA,TRUE,TBI
+1988,3346,Mark–Recapture,556,NA,NA,NA,NA,TRUE,TBI
+1989,2730,Mark–Recapture,249,NA,NA,NA,NA,TRUE,TBI
+1990,5603,Mark–Recapture,1164,NA,NA,NA,NA,TRUE,TBI
+1991,3172,Mark–Recapture,282,NA,NA,NA,NA,TRUE,TBI
+1992,5580,Mark–Recapture,478,NA,NA,NA,NA,TRUE,TBI
+1993,12241,Counting Tower,387,NA,NA,NA,NA,TRUE,TBI
+1994,11877,Counting Tower,479,NA,NA,NA,NA,TRUE,TBI
+1995,11394,Mark–Recapture,1210,NA,NA,NA,NA,TRUE,TBI
+1996,7153,Mark–Recapture,913,NA,NA,NA,NA,TRUE,TBI
+1997,13390,Counting Tower,699,NA,NA,NA,NA,TRUE,TBI
+1998,4745,Counting Tower,503,NA,NA,NA,NA,TRUE,TBI
+1999,6485,Counting Tower,427,NA,NA,NA,NA,TRUE,TBI
+2000,4694,Mark–Recapture,1184,NA,NA,NA,NA,TRUE,TBI
+2001,9696,Counting Tower,565,NA,NA,NA,NA,TRUE,TBI
+2002,6967,Mark–Recapture,2466,NA,NA,NA,NA,TRUE,TBI
+2003,11100,Counting Tower,653,NA,NA,NA,NA,TRUE,TBI
+2004,9645,Counting Tower,532,NA,NA,NA,NA,TRUE,TBI
+2005,NA,NA,NA,NA,NA,NA,NA,NA,TBI
+2006,2936,Counting Tower,163,NA,NA,NA,NA,TRUE,TBI
+2007,3806,Counting Tower,226,NA,NA,NA,NA,TRUE,TBI
+2008,3208,Counting Tower,198,NA,NA,NA,NA,TRUE,TBI
+2009,5253,Counting Tower,231,NA,NA,NA,NA,TRUE,TBI
+2010,2382,Counting Tower,152,NA,NA,NA,NA,TRUE,TBI
+2011,NA,NA,NA,NA,NA,NA,NA,NA,TBI
+2012,2220,Counting Tower,127,NA,NA,NA,NA,TRUE,TBI
+2013,1859,Counting Tower,141,NA,NA,NA,NA,TRUE,TBI
+2014,7192,Sonar,73,NA,NA,NA,NA,TRUE,TBI
+2015,6291,Counting Tower/Sonar,169,NA,NA,NA,NA,TRUE,TBI
+2016,6665,Sonar/Bay. hier. model,363,NA,NA,NA,NA,TRUE,TBI
+2017,5235,Counting Tower/Sonar,321,NA,NA,NA,NA,TRUE,TBI
+2018,5947,Counting Tower/Sonar/Bay. hier. Model,226,NA,NA,NA,NA,TRUE,TBI
+2019,2404,Counting Tower/Sonar/Bay. hier. Model,201,NA,NA,NA,NA,TRUE,TBI
+2020,306,Counting Tower/Sonar/Bay. hier. Model,35,NA,NA,NA,NA,FALSE,TBI
+2021,1416,Counting Tower/Sonar/Bay. hier. Model,80,NA,NA,NA,NA,TRUE,TBI
+2022,355,Counting Tower,39,NA,NA,NA,NA,TRUE,TBI

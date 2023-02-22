@@ -1,0 +1,28 @@
+# Annual estimates of Adult Chinook on the Big Salmon River,,,,,,,,
+# Overview of site and methods at https://www.yukonriverpanel.com/re-fund-project/chinook-salmon-sonar-enumeration-on-the-big-salmon-river/,,,,,,,,
+# Year = Run year,,,,,,,,
+# Estimate = run size of ALL Chinook at Big Salmon Sonar,,,,,,,,
+# SE = Standard Error calculated based on INSERT,,,,,,,,
+# p10 and p90 = 10th abd 90th percentiles of the ?posterior distribution?,,,,,,,,
+# Variance  = Calculated based on INSERT,,,,,,,,
+# CV = Coefficient of Variation = SE / Estimate,,,,,,,,
+# NEED TO CHECK: HH file has slightly different numbers,,,,,,,,
+Year,Estimate,SE,p10,p90,Variance,CV,Use,UseNotes
+2005,5618,NA,NA,NA,NA,NA,TRUE,TBI
+2006,7308,NA,NA,NA,NA,NA,TRUE,TBI
+2007,4506,NA,NA,NA,NA,NA,TRUE,TBI
+2008,1431,NA,NA,NA,NA,NA,FALSE,High water
+2009,9261,NA,NA,NA,NA,NA,TRUE,TBI
+2010,3817,NA,NA,NA,NA,NA,TRUE,TBI
+2011,5156,NA,NA,NA,NA,NA,TRUE,TBI
+2012,2584,NA,NA,NA,NA,NA,TRUE,TBI
+2013,3242,NA,NA,NA,NA,NA,TRUE,TBI
+2014,6321,NA,NA,NA,NA,NA,TRUE,TBI
+2015,10078,NA,NA,NA,NA,NA,TRUE,TBI
+2016,6761,NA,NA,NA,NA,NA,TRUE,TBI
+2017,5672,NA,NA,NA,NA,NA,TRUE,TBI
+2018,5159,NA,NA,NA,NA,NA,TRUE,TBI
+2019,3874,NA,NA,NA,NA,NA,TRUE,TBI
+2020,1635,NA,NA,NA,NA,NA,TRUE,TBI
+2021,1958,NA,NA,NA,NA,NA,TRUE,TBI
+2022,NA,NA,NA,NA,NA,NA,,NA

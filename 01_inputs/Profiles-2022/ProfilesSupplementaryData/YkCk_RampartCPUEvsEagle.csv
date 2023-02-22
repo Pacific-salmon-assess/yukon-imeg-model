@@ -1,0 +1,21 @@
+# Comparison of Rampart Rapids CPUE to Eagle Sonar (PRELIM),,
+# Year = Sample year,,
+# RapidsCPUE = Chinool catch-per-effort in fish wheel,,
+#  Eagle Sonar = passage estimate,,
+# data source compiled by Zachary Liller (ADFG) in May 2021,,
+Year,RapidsCPUE,EagleSonar
+2000,1743,
+2001,5477,
+2002,1652,
+2003,1631,
+2004,2890,
+2005,2061,81527
+2006,2923,73691
+2007,1014,41697
+2008,1645,38097
+2009,2937,69957
+2010,793,35074
+2011,2872,51271
+2012,3465,34747
+2013,2742,30578
+2014,6313,63462
