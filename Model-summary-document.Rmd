@@ -41,6 +41,8 @@ This document summarizes run-reconstructions for lower, middle, and upper (Canad
 Full model details and sensitivity analyses are described in: 
 
 >Connors, B.M., Bradley C.A., Cunningham C., Hamazaki T., and Liller, Z.W. 2022. Estimates of biological reference points for the Canadian-origin Yukon River mainstem Chinook salmon (*Oncorhynchus tshawytscha*) stock aggregate. DFO Can. Sci. Advis. Sec. Res. Doc. 2022/031.iv + 100 p.
+
+Repository with all data and code to reproduce data updates, model fitting, and this doc, can be found [here](https://github.com/Pacific-salmon-assess/yukon-imeg-model). 
 ```{r setup, include=FALSE}
 # Settings and libraries
 knitr::opts_chunk$set(echo = FALSE, message=FALSE, cache=FALSE, warning = FALSE, include=TRUE)
