@@ -7,7 +7,7 @@
 *.docx
 *.xls
 *.xlsx
-
+*.md
 *.exe
 
 # Rmarkdown output
