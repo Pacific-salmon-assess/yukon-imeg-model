@@ -10,4 +10,4 @@ Full model details are described in:
 - `01_inputs`: Contains raw data model is fit to as well as scripts for updating data file ('2022-updates-to-data.R') as more data become available. 
 - `02_models`: Contains Stan model file and script to fit model to data.
 - `03_outputs`: Contains posterior samples from model fit as well as csv of run-reconstruction estimates of escapement , harvest and harvest rate by stock ('rr-table-2022.csv')
-- 'Model-summary-document.Rmd': Is a Rmd file that can be used to summarize outputs from model. Just open and click 'Knit' button.
+- `Model-summary-document.Rmd`: Is a Rmd file that can be used to summarize outputs from model. Just open and click 'Knit' button.
