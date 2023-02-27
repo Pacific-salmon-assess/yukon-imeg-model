@@ -66,9 +66,10 @@ library(reshape2)
 library(ggpubr)
 library(viridis)
 library(gsl)
+
 # Read in Model Data and Output Files for each of the three models (base/body count, total eggs and total egg mass versions)
-stan.fit.bodies <- readRDS(file=file.path("03_outputs","base.stan.fit.2022.rds"))
-stan.data.bodies <- readRDS(file=file.path("03_outputs","base.stan.data.2022.rds"))
+stan.fit.bodies <- readRDS(here("03_outputs","base.stan.fit.2022.rds"))
+stan.data.bodies <- readRDS(here("03_outputs","base.stan.data.2022.rds"))
 model_bodies_pars <- rstan::extract(stan.fit.bodies)
 
 # Benchmarks
@@ -477,7 +478,7 @@ RR_table <- rbind(
   
 )
 colnames(RR_table) <-c("Stock", "Year", "Total run", "Escapement", "Harvest", "Harvest rate (%)")
-write.csv(RR_table, "03_outputs/rr-table-2022.csv", row.names = FALSE)
+write.csv(RR_table, here("03_outputs/rr-table-2022.csv"), row.names = FALSE)
 ```
 ## CDN spawner-recruitment parameters and reference points
 
