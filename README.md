@@ -11,3 +11,6 @@ Full model details are described in:
 - `02_models`: Contains Stan model file and script to fit model to data.
 - `03_outputs`: Contains posterior samples from model fit as well as csv of run-reconstruction estimates of escapement , harvest and harvest rate by stock ('rr-table-2022.csv')
 - `04_summary`: Contains a Rmd file (`Model-summary-document.Rmd`) that can be used to summarize outputs from model. Just open and click 'Knit' button. Also generates stand alone figures and outputs a `.csv` of run-reconstruction estimates that is saved to `03_outputs` folder
+
+## Updating data and refitting model 
+To update data add addition years in `01_inputs/2022-updates-to-data.R', save as a new R script (e.g., `2023-updates-to-data.R` and save updated .rds file. Then to fit model to updated data run `Run-integrated-model.R` in the `02_models` subfolder, also saving outputs as new year stamped .rds file. Lastly, to summarize outputs of model knit `Model-summary-document.Rmd` in the `04_summary` subfolder.
