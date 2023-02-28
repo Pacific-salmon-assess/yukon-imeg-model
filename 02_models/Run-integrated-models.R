@@ -26,7 +26,7 @@ options(mc.cores = parallel::detectCores()) #Selects number of cores to use for 
 rstan_options(auto_write = TRUE) # Avoid recompiling UNCHANGED .stan script
 
 # Set Stan sampling guidelines ----
-n.iter <- 1e2
+n.iter <- 1e4
 n.thin <- 2
 n.chains <- 4
 
@@ -304,6 +304,6 @@ print(paste("START:", timings[1]))
 print(paste("END:", timings[2]))
 
 # Save fitted model object and data
-saveRDS(stan.fit, file=file.path("03_outputs/base.stan.fit.2022.rds"))
-saveRDS(stan.data, file=file.path("03_outputs/base.stan.data.2022.rds"))
+saveRDS(stan.fit, here("03_outputs/base.stan.fit.2022.rds"))
+saveRDS(stan.data, here("03_outputs/base.stan.data.2022.rds"))
 

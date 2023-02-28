@@ -15,7 +15,7 @@
 
 #Model output file
 
-/03_outputs/*.rds
+03_outputs/*.rds
 
 # other files
 *.zip
