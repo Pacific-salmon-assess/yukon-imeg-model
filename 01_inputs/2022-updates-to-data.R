@@ -10,6 +10,8 @@ library(tidyverse)
 ModelInputs_UsedVariables_Censored <- readRDS("01_inputs/ModelInputs_UsedVariables_Censored_2019.RDS")
 
 # Add more recent years (values taken manually from files in "Profiles" folder)
+# File currently adds 2020, 2021, and 2022
+
 # East Andreafsky aerial 
 ModelInputs_UsedVariables_Censored$a_andr_e[40:42] <- c(335, 0, 0)
 ModelInputs_UsedVariables_Censored$a_andr_e_cv[40:42] <- c(0.25, 0.25, 0.25)
