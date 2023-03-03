@@ -6,6 +6,8 @@ Full model details are described in:
 
 >Connors, B.M., Bradley C.A., Cunningham C., Hamazaki T., and Liller, Z.W. 2022. Estimates of biological reference points for the Canadian-origin Yukon River mainstem Chinook salmon (*Oncorhynchus tshawytscha*) stock aggregate. DFO Can. Sci. Advis. Sec. Res. Doc. 2022/031.iv + 100 p.
 
+A summary of model outputs is available [here](https://pacific-salmon-assess.github.io/yukon-imeg-model/04_summary/Model-summary-document.html)
+
 ## Repository structure
 - `01_inputs`: Contains raw data model is fit to as well as scripts for updating data file ('2022-updates-to-data.R') as more data become available. 
 - `02_models`: Contains Stan model file and script to fit model to data.
