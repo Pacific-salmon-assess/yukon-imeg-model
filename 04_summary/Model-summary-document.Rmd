@@ -36,7 +36,7 @@ h2 { /* Header 2 */
 }
 </style>
 ```
-This document summarizes run-reconstructions for lower, middle, and upper (Canadian) Yukon River Chinook salmon (*Oncorhynchus tshawytscha*) stock aggregates as well as biological reference points for the Canadian stock. These estimates are based on a integrated state-space run reconstruction and spawner-recruitment model fit to data (1981-2022) from various assessment projects that estimate mainstem passage, harvests, tributary escapements, stock-proportions, and age-composition, under a single Bayesian estimation framework. 
+This document summarizes run-reconstructions for lower, middle, and upper (Canadian) Yukon River Chinook salmon (*Oncorhynchus tshawytscha*) stock aggregates as well as biological reference points for the Canadian stock. These estimates are based on an integrated state-space run reconstruction and spawner-recruitment model fit to data (**1981-2022**) from various assessment projects that estimate mainstem passage, harvests, tributary escapements, stock-proportions, and age-composition, under a single Bayesian estimation framework. 
 
 Full model details and sensitivity analyses are described in: 
 
@@ -471,7 +471,7 @@ write.csv(RR_table, here("03_outputs/rr-table-2022.csv"), row.names = FALSE)
 ```
 ## CDN spawner-recruitment parameters and reference points
 
-**Table 4**. Posterior means, medians and credible intervals for leading spawner-recruitment parameters and associated biological benchmarks. Also show are estimates of the effective sample size and potential scale reduction factor for parameters and benchmarks estimated by the model.
+**Table 4**. Posterior means, medians and credible intervals for leading spawner-recruitment parameters and associated biological benchmarks. Also shown are estimates of the effective sample size and potential scale reduction factor for parameters and benchmarks estimated by the model.
 
 ```{r}
 table.in <- benchmarks  %>% as.data.frame() %>%
@@ -479,18 +479,10 @@ table.in <- benchmarks  %>% as.data.frame() %>%
               rownames_to_column(var= "Variable") %>%
               dplyr::rename(Mean = mean,Median = "50%",p2.5 = "2.5%",p97.5 = "97.5%","n eff" = n_eff)
 
-#table.in[9,2] <- 0.4265 # hard coded hack
-table.in <- table.in[c(1:8,10),]
-
-table.in$Variable <- c("log (alpha)", "beta","sigma R","phi","Smsr","Seq","Smsy","Umsy","Umsr") # BC: for some reason losing rownames in script above so adding them back in here
-
-# formatting generally done by row or column inside kableExtra, but only by column (Var) in the source data frame
-# this table has a mix of number types in each col and row.
-# need to split, format, and stitch back together
+table.in$Variable <- c("log (alpha)", "beta","sigma R","phi","Smsr","Seq","Smsy","Umsy") 
 
 right.cols <- table.in %>% select("n eff",Rhat) %>% mutate(Rhat = round(Rhat,4))
 
-#right.cols <- right.cols[c(1:7,9,8,10),]
 
 pars.chunk <- table.in %>% dplyr::filter(Variable %in% c("log (alpha)", "sigma R","phi")) %>%
                   select(Variable,Mean, Median, p2.5,p97.5) %>% 
@@ -514,7 +506,7 @@ bm.chunk <- table.in %>% dplyr::filter(Variable %in% c("Smsr","Seq","Smsy")) %>%
                      mutate_at(2:5,function(x){prettyNum(round(x),big.mark = ",")}   )
 
 
-umsy.chunk <- table.in %>% dplyr::filter(Variable %in% c("Umsy","Umsr")) %>%
+umsy.chunk <- table.in %>% dplyr::filter(Variable %in% c("Umsy")) %>%
                   select(Variable,Mean, Median, p2.5,p97.5) %>% 
                      mutate_at(2:5,function(x){paste0(round(x*100),"%")}   )
 
@@ -524,7 +516,7 @@ table.in <- bind_rows(pars.chunk, bm.chunk,umsy.chunk) %>% bind_cols(right.cols)
                mutate(Variable = recode(Variable,Smsy = "$S_{MSY}$",Seq = "$S_{EQ}$",
                       Umsy = "$U_{MSY}$",
                       Smsr = "$S_{MSR}$", beta = "$\\beta$", phi = "$\\phi$", sigmaR = "$\\sigma_R$",
-                      Umsr = "$U_{MSR}$",logalpha = "$ln(\\alpha)$"))
+                      logalpha = "$ln(\\alpha)$"))
 
 names(table.in) <- gsub("n eff","$n_{eff}$",names(table.in))
 names(table.in) <- gsub("Rhat","$\\\\hat{R}$",names(table.in))
