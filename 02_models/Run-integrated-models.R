@@ -9,24 +9,12 @@ library(rstantools)
 library(here)
 library(beepr)
 
-
-# Define paths ---- 
-wd <- here() 
-dir.data <- file.path("01_inputs")
-dir.stan <- file.path("02_models")
-
-# Necessary Component to Run Stan in Parallel with R 4.0.0 on Mac 
-# if (Sys.getenv("RSTUDIO") == "1" && !nzchar(Sys.getenv("RSTUDIO_TERM")) && 
-#     Sys.info()["sysname"] == "Darwin" && getRversion() == "4.0.0") {
-#   parallel:::setDefaultClusterOptions(setup_strategy = "sequential")
-# }
-
 # Set Stan default controls ----
 options(mc.cores = parallel::detectCores()) #Selects number of cores to use for running parallel chains in Stan
 rstan_options(auto_write = TRUE) # Avoid recompiling UNCHANGED .stan script
 
 # Set Stan sampling guidelines ----
-n.iter <- 1e4
+n.iter <- 1e3
 n.thin <- 2
 n.chains <- 4
 
@@ -34,7 +22,7 @@ n.chains <- 4
 (n.iter/n.thin)*0.5*n.chains
 
 # Read in data and specify control files ----
-dat <- readRDS(file=file.path(dir.data, "ModelInputs_UsedVariables_Censored_2022Update.RDS"))
+dat <- readRDS(here("01_inputs/ModelInputs_UsedVariables_Censored_2022Update.RDS"))
 
 # RR inputs 
 
@@ -75,7 +63,7 @@ n_year <- length(years)
 
 # SRA Inputs 
 
-dat.h.age <- read.csv(file.path(dir.data,'HarAgeCompsRivSec2022Update.csv')) # Harvest age composition, by river section
+dat.h.age <- read.csv(here("01_inputs/HarAgeCompsRivSec2022Update.csv")) # Harvest age composition, by river section
 H_comps_bp <- dat.h.age[dat.h.age$river_sec=="below_pilot",3:6] # Harvest age composition below pilot
 H_comps_ap <- dat.h.age[dat.h.age$river_sec=="above_pilot",3:6] # Harvest age composition above pilot
 H_comps_cdn <- dat.h.age[dat.h.age$river_sec=="canada",3:6] # Harvest age composition in Canada (based on Eagle TF)
@@ -158,10 +146,6 @@ init_fn <- function(chain_id=1) {
 init_ll <- lapply(1:n.chains, function(id) init_fn(chain_id = id))
 
 # Run base Stan model ----
-
-# Specify version of model to fit 
-model_name <- "Integrated-RR-SRA-v9.7"
-model_file <- paste0(model_name, ".stan")
 
 # Track time
 timings <- vector(length=2)
@@ -284,8 +268,8 @@ stan.data <- list("fyear"=dat$fyear,
                   "ess_age_comp"=ess_age_comp)
                     
 # Fit model
-stan.fit <- stan(file = file.path(dir.stan, model_file),
-                  model_name= model_name,
+stan.fit <- stan(file = here("02_models/Integrated-RR-SRA-v9.7.stan"),
+                  model_name= "Integrated-RR-SRA-v9.7",
                   data = stan.data,
                   chains = n.chains, 
                   iter = n.iter, 
